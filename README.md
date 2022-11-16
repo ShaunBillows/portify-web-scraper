@@ -1,1 +1,1 @@
-An application for organising the tracks in a Spotify playlist according to their Beatport genre.
+An app for organising Spotify playlists by genre.

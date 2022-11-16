@@ -82,7 +82,6 @@ def scrape_beatport(url):
     html_doc = response.html.html
     soup = BeautifulSoup(html_doc, 'html.parser')
     for li in soup.findAll('li', attrs={'class':'interior-track-genre'}):
-        # return li
         for a in li.findAll('a'):
             if a.text:
                 return a.text

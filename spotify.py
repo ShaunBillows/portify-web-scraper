@@ -38,12 +38,12 @@ class spotify:
 
                 response_json = response.json()
 
-                for song in response_json["items"]:
+                for track in response_json["items"]:
 
                     tracks.append({
-                        "name": song["track"]["name"],
-                        "artist": song["track"]["artists"][0]["name"],
-                        "uri": song["track"]["uri"]
+                        "name": track["track"]["name"],
+                        "artist": track["track"]["artists"][0]["name"],
+                        "uri": track["track"]["uri"]
                     })
 
                 offset += 100
