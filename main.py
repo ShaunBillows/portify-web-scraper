@@ -1,8 +1,8 @@
-from scraper import get_beatport_url, scrape_beatport
-from spotify import spotify
+from src.scraper import get_beatport_url, scrape_beatport
+from src.spotify import spotify
 from time import sleep
-from utils import print_table
-from db import insert_playlist
+from src.utils import print_table
+from src.db import insert_playlist
 
 def app(): 
     tracks = spotify().get_tracks()
@@ -11,7 +11,6 @@ def app():
 
         try:
             url = get_beatport_url(f'beatport {track["name"]} {track["artist"]}', track["name"])
-            sleep(3) 
             genre = scrape_beatport(url)
             track['genre'] = genre
             track['url'] = url

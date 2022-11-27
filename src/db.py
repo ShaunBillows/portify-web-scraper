@@ -18,7 +18,7 @@ def insert_playlist(playlist):
         name (string): The name of the playlist to be inserted.
 
     Returns:
-        response (string): HTTP response object from PyMongo. 
+        response (string): Response object from PyMongo. 
     """
 
     try: 
